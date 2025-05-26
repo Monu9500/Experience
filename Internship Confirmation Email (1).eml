@@ -1,0 +1,340 @@
+Delivered-To: prighosh2004@gmail.com
+Received: by 2002:a05:7301:1014:b0:164:7e37:afdd with SMTP id ry20csp3032160dyc;
+        Tue, 15 Apr 2025 21:13:32 -0700 (PDT)
+X-Received: by 2002:a05:6902:2807:b0:e6b:8371:13e6 with SMTP id 3f1490d57ef6-e7275ded9aemr484265276.34.1744776812619;
+        Tue, 15 Apr 2025 21:13:32 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1744776812; cv=none;
+        d=google.com; s=arc-20240605;
+        b=EcdFfGla2HvzJk/2s2D6MBxa2iD4p/z4cKc3CBjEOO6Z+I+7ACpXNNc8+Y7C2D96Zs
+         lI2cx72IETlxkUPsglHa54NcPvIpaL3pN7RGdfo2PUZaohhrTXVRpPVzO8wJ/JrQQio+
+         7xlT7Co3khqsMl1N/7I/eAUzG8JvyqILL0LqsKQlDe/EetpsCepCVaW2DJfske10md61
+         Hx9UxwnoV1DXqhAP5/IesOjyRR1GUTctJSypUNcad7wNPwJwrR4a124elDabOZ1+5aPX
+         tdFLgKLojL2ttS/8wNv4l8fh4fik0vO8qXyRJk74sD7Kd8WSNpF1MZ3r1koI1qSsT0SL
+         HxGQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:mime-version:message-id:subject:from:to
+         :date:dkim-signature;
+        bh=iirDae64JEBPDmlgnvsmPmjh6cpSsnORotaIV03fDnU=;
+        fh=F/9egmRhDNYdrU1t+Ex39r9ppiMq65gpKfKuYtsJCes=;
+        b=SiAAOm1fAHxH3CCjGupHtprX8xtF2NnGG31d4sRu72qTektMf46eSwas0dpm1TkX/O
+         48zlBGvs0HTDBy01AFc50MnO/CiVowXgZrNDfFvJmKRSJbSyA20ofM2cECF+LrLKyq3Y
+         YGZIfkz7tk3XEPwbcgNqIGBhnM71+wS/7GD9ohBVZ2NED+y4IuDjWXcPXTaC1H9VVLPh
+         YT4KHegxYTVEAKfMmBFgtbnQKhjUQ41tc32DAXsPTpA66qODvAfkAySlGmfOQ3IuA/H/
+         dkm+5fUG7UQGiZrYl6zUvfXP4NeWWCTA/LnFrNJZy3UOngxF5D/H6wVe7JllkVXXaCZR
+         56sA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@iiserb.ac.in header.s=google header.b=auTaCRjU;
+       spf=pass (google.com: domain of noreply@iiserb.ac.in designates 209.85.220.97 as permitted sender) smtp.mailfrom=noreply@iiserb.ac.in;
+       dmarc=pass (p=QUARANTINE sp=REJECT dis=NONE) header.from=iiserb.ac.in;
+       dara=pass header.i=@gmail.com
+Return-Path: <noreply@iiserb.ac.in>
+Received: from mail-sor-f97.google.com (mail-sor-f97.google.com. [209.85.220.97])
+        by mx.google.com with SMTPS id 3f1490d57ef6-e703211d0a7sor8607011276.0.2025.04.15.21.13.32
+        for <prighosh2004@gmail.com>
+        (Google Transport Security);
+        Tue, 15 Apr 2025 21:13:32 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@iiserb.ac.in designates 209.85.220.97 as permitted sender) client-ip=209.85.220.97;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@iiserb.ac.in header.s=google header.b=auTaCRjU;
+       spf=pass (google.com: domain of noreply@iiserb.ac.in designates 209.85.220.97 as permitted sender) smtp.mailfrom=noreply@iiserb.ac.in;
+       dmarc=pass (p=QUARANTINE sp=REJECT dis=NONE) header.from=iiserb.ac.in;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=iiserb.ac.in; s=google; t=1744776812; x=1745381612; dara=google.com;
+        h=content-transfer-encoding:mime-version:message-id:subject:from:to
+         :date:from:to:cc:subject:date:message-id:reply-to;
+        bh=iirDae64JEBPDmlgnvsmPmjh6cpSsnORotaIV03fDnU=;
+        b=auTaCRjUTgNzc893K6PNbF0cnj/sHlWqBDZIGSYfnUaDRh5Ex+aTowuqOEES+1yKen
+         tCsdV+rgeRLyrZ61thbgWuQrarsiUE76jRSGWoXs0zZ5hd+hwoCMRsCrLT6cooggcujA
+         yfN8yvkwLOz9H6DW2FTPga/rjGamziVUMXubU=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1744776812; x=1745381612;
+        h=content-transfer-encoding:mime-version:message-id:subject:from:to
+         :date:x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=iirDae64JEBPDmlgnvsmPmjh6cpSsnORotaIV03fDnU=;
+        b=kkj55dQdKNTCZRGYp/ccprWf6FGPVK9L+ywta6kAc3fhBfvfjlsPI9j7URRvYdIFDV
+         seEQva8fec/ciB4izOFs4g/fc3kYWdOp0PvcfE8j7YLqC3xBhQzKxu/fQ3+zKCEuaHF5
+         T4hjpcXHk9ES/kIcEG1aZzQSQdEK+0LBtfqB55RueMyiWNPH4wkn/f6X7z7Vm2C7nUx8
+         T4Ag3DN2JRWkLl9TAGnjFcW1oGtjx78Qtsj5YLQc+FbNkPV+UysEP69V4tKuo0VIJaxG
+         OIVryFwSNIPFVk26mZg8P9snPinGiT4YhkrPpPZXH8Dk8FwkoLWQS3R+jZWbMKlDyql9
+         B+zw==
+X-Gm-Message-State: AOJu0YxDBxRl0CXfU+8XTdeFkA7JjVsmD/AE9EyjHW90IhTtI0xSpmrJ
+	/zWN+VjjXZkXkhoQCzgz9LzVgVBUQjKFAeh9rP348bZ+RFxyqY094Q42/qeXttLNPSmON4w/3EZ
+	Jj4j29yOiSrtbXraudyoYhsQdKznf2OabCO1g8r4U
+X-Gm-Gg: ASbGncsSkiYi1F6NT8KuzhhxQaJ9K8LZhe1JjwQ8jfoFcoMmU+f5v56M9jyof+cUQL+
+	e6C70Y4hEvDt/4nNAzWIGrzkvtmQmMsxSAnqhoL0ya0pqOvxahiZxcM9mEUZtN4Pq4A3OxOlz/D
+	YzJ5Gw8VupVlK7GK7044hIkCUwTTUzto3+tRmY6RI57QRQ9JhufvjJz1Z+woPE9EBkJcsxTgVjI
+	AbRgiY3nH48fQZ1Tyl+J5cHEpjwqM9jkkf2eoSucxo2LZZ7jRFPipJEztuluUuZ5xJGb7SMeXSj
+	hbJelKT8rBLi26zZGwlcGBp5dQ==
+X-Google-Smtp-Source: AGHT+IHng4Lim2fTXRXxBuRe6GcAXY8NfL3MIijfan5A811oIKfuC9bnQZfCtWp+oSCHaBtwiuu9p0d2kFTq
+X-Received: by 2002:a05:6902:2683:b0:e63:4b42:6940 with SMTP id 3f1490d57ef6-e72757c5c0cmr502613276.2.1744776812081;
+        Tue, 15 Apr 2025 21:13:32 -0700 (PDT)
+Return-Path: <noreply@iiserb.ac.in>
+Received: from internship.iiserb.ac.in ([203.18.51.44])
+        by smtp-relay.gmail.com with ESMTPS id 3f1490d57ef6-e726c6e6d1dsm58843276.24.2025.04.15.21.13.31
+        for <prighosh2004@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 15 Apr 2025 21:13:32 -0700 (PDT)
+X-Relaying-Domain: iiserb.ac.in
+Date: Wed, 16 Apr 2025 09:43:29 +0530
+To: prighosh2004@gmail.com
+From: IISER Bhopal <noreply@iiserb.ac.in>
+Subject: Internship Confirmation Email
+Message-ID: <b9d67ee0900d14ead2fd739f62107dfc@internship.iiserb.ac.in>
+X-Priority: 3
+X-Mailer: PHPMailer 5.2.26 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_b9d67ee0900d14ead2fd739f62107dfc"
+Content-Transfer-Encoding: 8bit
+
+This is a multi-part message in MIME format.
+
+--b1_b9d67ee0900d14ead2fd739f62107dfc
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Dear Pritam Ghosh, 
+
+ With reference to your application no. 397 for Internship at IISER Bhopal,
+we are pleased to inform that you have been selected for internship entitled
+“Dna Nanoelectronics” under the guidance of Dr. Kuntal Roy, Department
+of Electrical Engineering And Computer Science.
+ 
+ Kindly submit your acceptance by April 20th by filling out the Google form
+by Clicking here. It will be assumed that you are not interested in the
+internship if no response is received by the deadline, and the offer will be
+automatically withdrawn. 
+ No further requests will be entertained in this regard.
+ 
+ 
+ Please note the following:
+
+ The Internship will start on May 26, 2025 and end on July 21, 2025. 
+
+No stipend will be paid to you for carrying out Internship at IISER Bhopal. 
+
+You must bring your Institute/government issued identity card and two colour
+passport size photographs. 
+
+No academic evaluation of the candidate will be done by the Academic Office.
+
+
+After successful completion of Internship and submission of a detailed
+project report, a certificate will be issued by the Faculty-in-charge. 
+
+ Hostel Accommodation will be provided strictly for the duration of the
+Internship, i.e. maximum of 02 months, according to the Advertisement (from
+May 26 to July 21, 2025) only. Hostel rooms will be allotted on a sharing
+basis on the day of reporting at IISER Bhopal at the allotted Hostel office.
+
+
+Hostel accommodation: Hostel allotment for (Non-IISER Interns): Boys in
+Hostel-6 and Girls in Hostel-5. (Internal interns’ students will be
+allotted in their respective hostels on a sharing basis).
+
+ON campus mess will be allotted to all Interns.
+
+Hostel Room rent shall be Rs. 1500/- per month. Charges will be levied in
+multiple of 15 days.
+
+Steps to pay hostel charges through SBI Collect SBI I-Collect
+(https://onlinesbi.sbi => State Bank Collect => Educational Institutions =>
+Madhya Pradesh => Indian Institute of Science Education and Research Bhopal
+=> Temporary Hostel Accommodation Fees).
+
+A copy of the e-receipt of payment has to be submitted to the Hostel
+Caretaker (hostel office) on the day of reporting IISER Bhopal. In case of
+cancellation of internship, hostel rent paid may be refunded after deduction
+of 10% administrative charges on production of e-receipt of payment proof,
+after approval of the competent authority. Refund of hostel rent paid will
+not be allowed after joining the internship program in the institute.
+
+Students shall bring their own light Bedding and lock &key and personal
+toiletries.
+
+No personal electrical appliances (Kettle, Iron, Induction Cooker) is
+allowed under any circumstances with in the hostel.
+
+Accommodation will be provided on sharing basis.
+
+Mess facility shall be provided on payment basis. Mess fee payment shall be
+made directly to Mess Contractor as per actuals.
+
+Hostel accommodation is confirmed to all eligible interns on sharing basis.
+
+All Interns students should adhere to the rules that govern the hostel.
+Web-link to hostel rules 
+All Interns Directly reported to the faculty/department concerned.
+
+Accommodation will not be available for Online Internship.
+
+For any query you can drop an email on internship@iiserb.ac.in.
+ 
+
+Sincerely,
+Dean, Academic Affairs
+
+
+--b1_b9d67ee0900d14ead2fd739f62107dfc
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Internship Application Registration | IISER Bhopal</title>
+	</head>
+	<body>
+		<div>
+			<table style="width:100%;border-spacing:0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+					<th style="border-top:solid 5px #f56400;font-weight:normal;text-align:center;background:#ffffff;border-bottom:solid 1px #e3e5e1">
+						<table style="width:100%;max-width:750px;border-spacing:0;margin:0 auto" cellpadding="0" cellspacing="0" align="center">
+							<tbody>
+								<tr>
+									<td>
+										<table style="margin:0%;width:100%;border-spacing:0;table-layout:fixed" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td style="padding:17px 3.358% 15px">
+														<cite style="text-align:center;display:block;font-style:normal">
+															
+															<dl style="list-style-type:none;padding:0;overflow:hidden;margin:0">
+																<dt style="font-size:15px;display:inline-block;width:100%;margin:0;padding:0 0 12px 0;vertical-align:top;padding-bottom:0!important">
+																	<!--<a href="" title="Security" style="display:inline-block" target="_blank">Gate-Pass Registration</a>-->
+																</dt>
+																<div style="font-size:15px;display:inline-block;width:100%;margin:0;vertical-align:top"></div>
+															</dl>
+														</cite>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</th>
+					</tr>
+					<tr><th style="background:#f5f5f1;height:28px"></th></tr>
+					<tr>
+					<th style="background:#f5f5f1;font-weight:normal;text-align:left">
+						<table style="width:100%;max-width:750px;border-spacing:0;margin:0 auto" cellpadding="0" cellspacing="0" align="center">
+							<tbody>
+								<tr>
+									<td>
+										<table style="margin:0%;width:100%;border-spacing:0;table-layout:fixed" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td style="padding:0 3.358%;font-size:15px;color:#555;line-height:24px">    
+														<div style="min-height:28px"></div>
+														<div style="padding:24px 3.6% 24px;background:#fff;border:1px solid #e3e5e1">
+															<table cellpadding="0" cellspacing="0" style="width:100%;margin:0;padding:0">
+																<tbody>
+																	<tr>
+																		<td>
+																			<div style="width:100%">
+																				<b>Dear Pritam Ghosh,</b>  <span class="il"></span>
+																				
+																				<div style="min-height:15px;"></div>
+									<hr style="border: 0;   height: 1px;   background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); "	/>
+																				
+																				
+																				<div style="width:100%" style="margin-top:5px;"><!--<p>Dear &lt;Student Name&gt;,--><br>
+  With reference to your  application no. 397 for Internship at IISER Bhopal,  we are pleased to inform that you have been selected for internship entitled &ldquo;Dna Nanoelectronics&rdquo; under the guidance of Dr. Kuntal Roy, Department of Electrical Engineering And Computer Science.<br>
+  
+  <p><strong>Kindly submit your acceptance by April 20th by filling out the Google form by  <a style='color:#990000' href='https://forms.gle/nT5mZzst2uPM43J68' target='_blank'> Clicking here. </a> It will be assumed that you are not interested in the internship if no response is received by the deadline, and the offer will be automatically withdrawn. </strong></p>
+  <p> No further requests will be entertained in this regard.</p>
+  
+  
+  Please note the following:</p>
+<ol>
+  <li>The Internship will start on May 26, 2025 and end on July 21, 2025.</li> 
+
+<li>No stipend will be paid to you for carrying out Internship at IISER Bhopal.</li> 
+
+<li>You must bring your Institute/government issued identity card and two colour passport size photographs.</li> 
+
+<li>No academic evaluation of the candidate will be done by the Academic Office.</li> 
+
+<li>After successful completion of Internship and submission of a detailed project report, a certificate will be issued by the Faculty-in-charge.</li> 
+
+<li> Hostel Accommodation will be provided strictly for the duration of the Internship, i.e. maximum of 02 months, according to the Advertisement (from May 26 to July 21, 2025) only. Hostel rooms will be allotted on a sharing basis on the day of reporting at IISER Bhopal at the allotted Hostel office.</li> 
+
+
+<li>Hostel accommodation: Hostel allotment for (Non-IISER Interns): Boys in Hostel-6 and Girls in Hostel-5. (Internal interns’ students will be allotted in their respective hostels on a sharing basis).</li>
+
+<li>ON campus mess will be allotted to all Interns.</li>
+
+<li>Hostel Room rent shall be Rs. 1500/- per month. Charges will be levied in multiple of 15 days.</li>
+
+<li>Steps to pay hostel charges through SBI Collect SBI I-Collect (https://onlinesbi.sbi => State Bank Collect => Educational Institutions => Madhya Pradesh => Indian Institute of Science Education and Research Bhopal => Temporary Hostel Accommodation Fees).</li>
+
+<li>A copy of the e-receipt of payment has to be submitted to the Hostel Caretaker (hostel office) on the day of reporting IISER Bhopal. In case of cancellation of internship, hostel rent paid may be refunded after deduction of 10% administrative charges on production of e-receipt of payment proof, after approval of the competent authority. Refund of hostel rent paid will not be allowed after joining the internship program in the institute.</li>
+
+
+<li>Students shall bring their own light Bedding and lock &key and personal toiletries.</li>
+
+<li>No personal electrical appliances (Kettle, Iron, Induction Cooker) is allowed under any circumstances with in the hostel.</li>
+
+<li>Accommodation will be provided on sharing basis.</li>
+
+<li>Mess facility shall be provided on payment basis. Mess fee payment shall be made directly to Mess Contractor as per actuals.</li>
+
+<li>Hostel accommodation is confirmed to all eligible interns on sharing basis.</li>
+
+<li>All Interns students should adhere to the rules that govern the hostel. Web-link to hostel <a style='color:#900' href='https://www.iiserb.ac.in/dosa/hostel_rules' target='_blank'>rules </li>
+<li>All Interns Directly reported to the faculty/department concerned.</li>
+
+<li><strong><i>Accommodation will not be available for Online Internship</i></strong>.</li>
+
+<li><strong><i>For any query you can drop an email on internship@iiserb.ac.in</i></strong>.</li>
+  
+</ol>
+<p>Sincerely,</p>
+<p>Dean, Academic Affairs</p> </div>
+																				
+																				
+																				
+								<div style="min-height:5px;"></div>
+									<hr style="border: 0;   height: 1px;   background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); "	/>												
+																				
+																				<div style="min-height:28px"></div>
+																			</div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="yj6qo"></div>
+						<div class="adL"></div>
+					</th>
+					</tr>
+					<tr><th style="background:#f5f5f1;height:28px"></th></tr>
+					<tr><th style="background:#f5f5f1;height:28px"></th></tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html> 
+
+
+
+--b1_b9d67ee0900d14ead2fd739f62107dfc--
+
